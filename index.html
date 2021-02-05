@@ -9,23 +9,36 @@
 	</head>
 
 	<body>
-		<section>
-			<h1>
-				Todo app
-			</h1>
+        <div class="container">
+            <section class="inputSection">
+                <h1>
+                    Bullet journal app
+                </h1>
+    
+                <!-- Form input to type in a task -->
+                <form action=""> 
+                    <div class="form-body">
+                        <label for="item">Write here: </label>
+                        <input type="text" name="userInput" id="userInput">
+                        <input type="button" id="addItemButton" value="➕">
+                    </div>
 
-			<!-- Form input to type in a task -->
-			<form action=""> 
-				
-			</form>
-		</section>
+                    
+                </form>
+            </section>
+    
+            <section class="outputSection">
+                <ul id="bucket" class="bucket">
+                    <li class="item task">
+                        <span>Buy the milk</span><button class="item__btn task__done-btn">✔️</button><button class="item__btn task__delete-btn">🗑️</button>
+                    </li>
+                    <li class="item task task--done">
+                        <span>Walk the dogs</span><button class="item__btn task__done-btn">✔️</button><button class="item__btn task__delete-btn">🗑️</button>
+                    </li>
+                </ul>	
+            </section>
+        </div>
 
-		<section>
-			<ul>
-				<li class="task">Buy the milk <button class="done-button">Done</button><button class="delete-button">X</button></li>
-				<li class="task-done">Walk the dogs <button class="done-button">Done</button><button class="delete-button">X</button></li>
-			</ul>	
-        </section>
         <script src="app.js"></script>
 	</body>
 </html>
