@@ -9,6 +9,7 @@ function init() {
 document.addEventListener("click", function (event) {
     // If Nuke button is clicked, remove all items <<kaboom>> 
     if (event.target.matches(".nuke-button")) {
+        event.preventDefault(); // from https://teamtreehouse.com/community/how-to-stop-javascript-window-reloading-when-each-time-button-is-on-a-page
         handleNukeBtn();
     }
 
@@ -42,11 +43,14 @@ function handleKeypress(e) {
 }
 
 function handleNukeBtn() {
-    var bucket = document.getElementById("bucket");
-    var child = bucket.firstElementChild;
-    while (child) {
-        bucket.removeChild(child);
-        child = bucket.firstElementChild;
+    var result = confirm("Are you sure you want to nuke delete all the todos here?");
+    if (result === true) {
+        var bucket = document.getElementById("bucket");
+        var child = bucket.firstElementChild;
+        while (child) {
+            bucket.removeChild(child);
+            child = bucket.firstElementChild;
+        }    
     }
 }
 
