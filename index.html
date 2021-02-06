@@ -12,15 +12,16 @@
         <div class="container">
             <section class="inputSection">
                 <h1>
-                    Bullet journal app
+                    Todo app
                 </h1>
     
                 <!-- Form input to type in a task -->
                 <form action=""> 
                     <div class="form-body">
                         <label for="item">Write here: </label>
-                        <input type="text" name="userInput" id="userInput">
+                        <input type="text" name="userInput" id="userInput" autofocus>
                         <input type="button" id="addItemButton" value="➕">
+                        <button id="nuke-button" class="nuke-button">💣 Nuke todos</button>
                     </div>
 
                     
@@ -29,12 +30,12 @@
     
             <section class="outputSection">
                 <ul id="bucket" class="bucket">
-                    <li class="item task">
+                    <!-- <li class="item task">
                         <span>Buy the milk</span><button class="item__btn task__done-btn">✔️</button><button class="item__btn item__delete-btn">🗑️</button>
                     </li>
                     <li class="item task task--done">
                         <span>Walk the dogs</span><button class="item__btn task__done-btn">✔️</button><button class="item__btn item__delete-btn">🗑️</button>
-                    </li>
+                    </li> -->
                 </ul>	
             </section>
         </div>
